@@ -170,16 +170,16 @@ const verifyOtp = async (req, res) => {
   const { _id } = user._doc;
 
   res.status(200).json({
-  message: 'OTP verified successfully',
-  user: {
-    id: user._id,
-    name: user.name,
-    email: user.email,
-    phone: user.phone,
-    role: user.role,
-    token: generateToken(user._id),
-  }
-});
+    message: "OTP verified successfully",
+    user: {
+      id: user._id,
+      name: user.name,
+      email: user.email,
+      phone: user.phone,
+      role: user.role,
+      token: generateToken(user._id),
+    },
+  });
 };
 
 module.exports = {
