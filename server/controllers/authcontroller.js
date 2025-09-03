@@ -164,7 +164,7 @@ const verifyOtp = async (req, res) => {
 
   // Clear OTP after successful verification
   user.otp = null;
-  user.otpExpiresAt = null;
+  user.otpExpiresAt = null ;
   await user.save();
 
   const { _id } = user._doc;
